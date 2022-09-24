@@ -1,0 +1,712 @@
+:root {
+    --orange: #E67E22;
+    --black: #333;
+    --ligi-color: #777;
+    --border: .1rem solid rgba(0, 0, 0, .2);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    font-weight: lighter;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+section {
+    padding: 2rem 8%;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    border-radius: 5rem;
+    background: var(--orange);
+}
+
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 1.5rem 7%;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    background: #fff;
+
+}
+
+header .logo {
+    margin-right: auto;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+    color: var(--black);
+}
+
+header .logo span {
+    color: var(--orange);
+}
+
+header .navbar a {
+    color: var(--ligi-color);
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    font-weight: 500;
+}
+
+header .icons {
+    margin: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+header .icons div {
+    color: var(--black);
+    font-size: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    cursor: pointer;
+    margin: 0 1rem;
+    border-radius: 50%;
+    background: #fadcdc;
+}
+
+header .icons div:hover {
+    background: var(--orange);
+    color: var(--black);
+}
+
+#bars-btn {
+    display: none;
+}
+
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+header form {
+
+    position: absolute;
+    top: 105%;
+    width: 35rem;
+    background: #fadcdc;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    text-transform: none;
+    font-size: 1.5rem;
+    color: var(--black);
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border: var(--border);
+    right: 5%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+}
+
+header form.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+header form #search-box {
+    background: transparent;
+    outline: none;
+    width: 100%;
+    padding: 1rem .5rem;
+}
+
+header form label {
+    font-size: 1.7rem;
+    padding: 0 1rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+header form label:hover {
+    color: var(--orange);
+}
+
+.btn {
+    color: #fff;
+    font-size: 1.5rem;
+    background: #333333;
+    padding: 1rem 2.5rem;
+    border-radius: .5rem;
+    display: inline-block;
+    letter-spacing: .2rem;
+    font-weight: 500;
+
+}
+
+.btn:hover {
+    background-color: var(--orange);
+    color: #fff;
+}
+
+
+.banner {
+    background: url(images/banner.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 9rem 0;
+    display: grid;
+    place-items: center;
+
+
+}
+
+.banner .content {
+    text-align: center;
+    background: #fff;
+    padding: 3rem;
+    border-radius: .5rem;
+    max-width: 50rem;
+}
+
+.banner .content .banner-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.banner .content p {
+    color: var(--ligi-color);
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2.5fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 1.5rem;
+}
+
+.container .post-container .post {
+    width: 100%;
+    border-radius: .5rem;
+    border: var(--border);
+    background: #fff;
+    margin-bottom: 1.5rem;
+    -webkit-box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+}
+
+.container .post-container .post .images {
+    width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+    height: 40rem;
+}
+
+.container .post-container .post .flex-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    color: var(--orange);
+    font-size: 1.5rem;
+}
+
+.container .post-container .post .post-title {
+    font-size: 2rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.container .post-container .post .post-text {
+    font-size: 1.5rem;
+    color: var(--ligi-color);
+    padding-bottom: 1rem;
+    line-height: 2;
+}
+
+.container .post-container .post .link {
+    border-top: var(--border);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.container .post-container .post .link .flex-2 {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--ligi-color);
+}
+
+.container .post-container .post .link .flex-2:hover {
+    color: var(--orange);
+}
+
+.container .post-container .post .link .flex-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .post-container .post .link .flex-box .flex-2 {
+    margin: 0 .5rem;
+}
+
+
+.container .user-container .box {
+    border: var(--border);
+    margin-bottom: 1.5rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+
+}
+
+.container .user-container .box .user-title {
+    background: var(--black);
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+.container .user-container .box img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 1.5rem 0;
+}
+
+.container .user-container .box .user-name {
+    color: var(--orange);
+    font-size: 1.7rem;
+
+}
+
+.container .user-container .box .user-text {
+    font-size: 1.5rem;
+    color: var(--ligi-color);
+    line-height: 2;
+    padding: 1.5rem 3rem;
+}
+
+.container .user-container .box .icons {
+    padding-bottom: 1.5rem;
+}
+
+.container .user-container .box .icons a {
+    width: 4rem;
+    height: 4rem;
+    text-align: center;
+    line-height: 4rem;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2rem;
+    background: var(--black);
+    margin: 0 .5rem;
+
+}
+
+.container .user-container .box .icons a:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+.container .user-container .box .categories-link a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 1rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--black);
+    justify-content: space-between;
+}
+
+.container .user-container .box .categories-link {
+    padding: 1rem;
+}
+
+.container .user-container .box .categories-link a:hover {
+    color: orange;
+}
+
+.container .user-container .box .categories-link a span {
+    background: var(--ligi-color);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.container .user-container .box .popular {
+    padding: 1rem;
+    text-align: left;
+}
+
+.container .user-container .box .popular a {
+    color: var(--black);
+    padding: 1.5rem 0;
+    display: inline-block;
+
+}
+
+.container .user-container .box .popular a h3:hover {
+    color: orange
+}
+
+.container .user-container .box .popular a h3 {
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.container .user-container .box .popular a span {
+    color: var(--ligi-color);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    font-weight: lighter;
+}
+
+.container .user-container .box .buttons-link {
+    padding: 1rem;
+}
+
+.container .user-container .box .buttons-link a {
+    padding: 1rem 1.5rem;
+    color: var(--black);
+    font-size: 1.5rem;
+    border: var(--border);
+    margin: .5rem;
+    border-radius: .5rem;
+    display: inline-block;
+}
+
+.container .user-container .box .buttons-link a:hover {
+    background: var(--black);
+    color: #fff;
+}
+
+.contact form h3 {
+    color: var(--black);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#contact {
+    background: url(images/contact-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 2rem auto;
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    border-radius: .5rem;
+
+
+
+}
+
+.contact form .input-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem .7rem;
+    border: var(--border);
+    background: #ccc;
+    border-radius: .5rem;
+    margin: .7rem 0;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.5rem;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form .input-box input:focus,
+.contact form textarea:focus {
+    background: lightblue;
+}
+
+.contact form .btn {
+    text-align: center;
+    cursor: pointer;
+    margin-top: .5rem;
+}
+
+.contact form .btn:hover {
+    letter-spacing: .4rem;
+}
+
+.fotter .fotter-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 2rem 0;
+}
+
+.fotter .fotter-container .box .fotter-title {
+    color: var(--black);
+    font-size: 2rem;
+}
+
+.fotter .fotter-container .box p {
+    font-size: 1.5rem;
+    color: var(--ligi-color);
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.fotter .fotter-container .box .btn {
+    padding: 1rem;
+}
+
+.fotter .fotter-container .box .btn:hover {
+    color: #fff;
+}
+
+.fotter .fotter-container .box .link a {
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem 0;
+    color: var(--ligi-color);
+    font-weight: 500;
+}
+
+.fotter .fotter-container .box a:hover {
+    color: var(--orange);
+}
+
+.fotter .fotter-container .box form .inputbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    width: 22rem;
+    margin: 2rem 0;
+    border-radius: .5rem;
+    background: rgba(0, 0, 0, .1);
+}
+
+.fotter .fotter-container .box form .inputbox input {
+    padding: 1rem;
+    background: transparent;
+    border-radius: .5rem;
+    text-transform: none;
+    color: var(--black);
+    font-size: 1.5rem;
+    width: 100%;
+
+}
+
+.fotter .fotter-container .box form .inputbox label {
+    color: var(--orange);
+    font-size: 1.7rem;
+    padding: 0 1.5rem;
+}
+
+.fotter .fotter-container .box .links a {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    background: #ccc;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    color: var(--black);
+    margin: 0 .5rem;
+
+}
+
+.fotter .fotter-container .box .links {
+    margin-top: 3rem;
+}
+
+.fotter .fotter-container .box .links a:hover {
+    color: var(--orange);
+
+}
+
+.created {
+    text-align: center;
+    border-top: var(--border);
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    font-size: 2rem;
+    color: var(--black);
+
+}
+
+.created span {
+    color: var(--orange);
+}
+
+
+@media (max-width:1200px) {
+    section{
+        padding: 2rem;
+    }
+    
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:991) {
+    section{
+        padding: 2rem 7%;
+    }
+    header{
+        padding: 1.5rem ;
+    }
+    .container{
+        grid-template-columns: 2fr 1fr;
+    }
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+    section{
+        padding: 2rem 8%;
+    }
+    
+    html{
+        font-size: 50%;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .container .post-container .post .images{
+        height: 30rem;
+    }
+    #bars-btn{
+        display: block;
+    }
+    header form{
+        width:90%;
+        margin: 1rem auto;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        background: #fff;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        z-index: 10005;
+        border: var(--border);
+        clip-path:polygon(0 0 , 100% 0 , 100% 0 , 0 0 );
+    }
+    header .navbar.active{
+        clip-path: polygon( 0 0 , 100% 0, 100% 100% , 0 100%);
+    }
+    header .navbar a{
+        display: block;
+        border: var(--border);
+        box-shadow: var(--box-shadow);
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+
+}
+@media (max-width:450px) {
+    section{
+        padding: 2rem 6%;
+    }
+    
+    html{
+        font-size: 45%;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
